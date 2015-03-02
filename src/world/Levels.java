@@ -1,9 +1,8 @@
 package world;
 
-import npcs.CoolGuy;
+import textStuff.CutsceneTest;
 import npcs.DrilNpc;
 import npcs.HellNpc;
-import npcs.Kyle;
 import npcs.TestNpc;
 import npcs.newguy;
 
@@ -168,7 +167,9 @@ public class Levels {
 		new Solid(0, 0);
 		new Solid(64, 64);
 		new Solid(64, 512);
+		
 		new newguy(300, 448);
+		new CutsceneTest(0, 0);
 	}
 	
 	public static void shit1()
