@@ -2,7 +2,7 @@ package npcs;
 
 import textStuff.TextManager;
 import world.Global;
-import world.ShitBoy;
+import world.Player;
 import main.Scene;
 import graphics.Sprite;
 
@@ -36,7 +36,7 @@ public class HellNpc extends NpcBase{
 		{
 			hspeed = 0;
 			
-			ShitBoy.Current_Npc = this;
+			Player.Current_Npc = this;
 			TextManager.maxtext = maxtxt;
 		}
 		

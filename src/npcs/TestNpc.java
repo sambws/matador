@@ -2,7 +2,7 @@ package npcs;
 
 import textStuff.TextManager;
 import world.Global;
-import world.ShitBoy;
+import world.Player;
 import main.Scene;
 import graphics.Sprite;
 
@@ -22,7 +22,7 @@ public class TestNpc extends NpcBase{
 		
 		maxtxt = 2;
 		
-		txt[0] = "shit";
+		txt[0] = "a";
 		txt[1] = "help m out";
 		
 		portrait = Sprite.get("FACE");
@@ -38,7 +38,7 @@ public class TestNpc extends NpcBase{
 		{
 			hspeed = 0;
 			
-			ShitBoy.Current_Npc = this;
+			Player.Current_Npc = this;
 			TextManager.maxtext = maxtxt;
 		}
 		
@@ -55,7 +55,7 @@ public class TestNpc extends NpcBase{
 		
 		if(talk_count >= 2)
 		{
-			if(ShitBoy.hasItem == false) //if you don't have the baby
+			if(Player.hasItem == false) //if you don't have the baby
 			{
 				if(gave_baby == false) //and you haven't gave it to them yet
 				{
@@ -69,7 +69,7 @@ public class TestNpc extends NpcBase{
 			}else //if you have the baby
 			{
 				maxtxt = 4;
-				txt[0] = "HOLY SHIT.";
+				txt[0] = "hi.";
 				txt[1] = "YOU FOUND MY BABY......";
 				txt[2] = "thank.";
 				txt[3] = "[He takes away your ITEM]";
@@ -87,7 +87,7 @@ public class TestNpc extends NpcBase{
 	{
 		if(gave_baby == true)
 		{
-			ShitBoy.hasItem = false;
+			Player.hasItem = false;
 			spin = true;
 		}
 	}

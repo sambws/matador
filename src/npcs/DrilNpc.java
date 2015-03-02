@@ -2,7 +2,7 @@ package npcs;
 
 import textStuff.TextManager;
 import world.Global;
-import world.ShitBoy;
+import world.Player;
 import main.Scene;
 import graphics.Sprite;
 
@@ -39,15 +39,15 @@ public class DrilNpc extends NpcBase{
 		{
 			vspeed = 0;
 			
-			ShitBoy.Current_Npc = this;
+			Player.Current_Npc = this;
 			TextManager.maxtext = maxtxt;
 		}
 		
 		if(talk_count == 1)
 		{
 			maxtxt = 2;
-			txt[0] = "shit";
-			txt[1] = "fuck";
+			txt[0] = "h";
+			txt[1] = "q";
 		}
 		if(talk_count >= 2)
 		{

@@ -10,7 +10,7 @@ import main.Entity;
 import main.Input;
 import main.Scene;
 
-public class ShitBoy extends Entity{
+public class Player extends Entity{
 	
 	public static NpcBase Current_Npc = null; //used for displaying the text
 	
@@ -20,7 +20,7 @@ public class ShitBoy extends Entity{
 	boolean started_cutscene = false;
 	public static boolean hasItem = false;
 
-	public ShitBoy(double x, double y) {
+	public Player(double x, double y) {
 		super(x, y);
 		persistent = true;
 		sprite = Sprite.get("poop");

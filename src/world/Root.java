@@ -32,7 +32,7 @@ public class Root extends Entity{
         changeRoom("test room");
         
         //spawn persistent shit
-        new ShitBoy(128, 320);
+        new Player(128, 320);
         new TextManager(0, 0); 
 	}
 	

@@ -11,10 +11,9 @@ DONE:
 TODO:
 - graphix/polish
 - find a better way to load in levels besides massive functions/walls of code (look at the source for 2???)
-- also make an npc editor.
-- make a cutscene editor??????? that'd be neat
-- work on the editor and make that beautiful
+- npc editor
+- cutscene editor
 
 CLEANUP:
 -maybe combine the talking/cutscene var for cleaner/easier code
--PACKAGES PACKAGES PACKAGES
+-more packages

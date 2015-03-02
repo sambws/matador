@@ -1,7 +1,7 @@
 package textStuff;
 
 import world.Global;
-import world.ShitBoy;
+import world.Player;
 import npcs.NpcBase;
 import graphics.Sprite;
 
@@ -16,13 +16,13 @@ public class CutsceneThing extends NpcBase{
 		super(x, y);
 		
 		maxtxt = 5;
-		txt[0] = "where the fuck am i??????";
-		txt[1] = "????????";
-		txt[2] = "Time to shit.";
-		txt[3] = "what the fuck is that.";
-		txt[4] = "Aaaaaaaaaaaaaaa.";
+		txt[0] = "a.";
+		txt[1] = "b.";
+		txt[2] = "c.";
+		txt[3] = "d.";
+		txt[4] = "e.";
 		
-		ShitBoy.Current_Npc = this;
+		Player.Current_Npc = this;
 		Global.cutscene = true;
 		TextManager.maxtext = maxtxt;
 		
