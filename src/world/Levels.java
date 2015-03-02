@@ -1,8 +1,11 @@
 package world;
 
+import npcs.CoolGuy;
 import npcs.DrilNpc;
 import npcs.HellNpc;
+import npcs.Kyle;
 import npcs.TestNpc;
+import npcs.newguy;
 
 
 //FIND A BETTER WAY TO DO THIS SHIT!!!!!!!!!!!!!!!!!
@@ -165,9 +168,7 @@ public class Levels {
 		new Solid(0, 0);
 		new Solid(64, 64);
 		new Solid(64, 512);
-		new HellNpc(300, 448);
-		new DrilNpc(384, 192);
-		new TestNpc(576, 384);
+		new newguy(300, 448);
 	}
 	
 	public static void shit1()

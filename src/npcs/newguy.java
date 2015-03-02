@@ -6,33 +6,30 @@ import world.Player;
 import main.Scene;
 import graphics.Sprite;
 
-public class DrilNpc extends NpcBase{
+public class newguy extends NpcBase{
 	
-	public DrilNpc(double x, double y) {
+	public newguy(double x, double y) {
 		super(x, y);
 		
-		idle = Sprite.get("dril");
-		walk = Sprite.get("dril");
+		//sprites
+		idle = Sprite.get("poop");
+		walk = Sprite.get("poop");
 		portrait = Sprite.get("FACE");
 		
 		sprite = idle;
-		
-		sprite.imageHeight = 64;
-		sprite.imageWidth = 64;
-		mask.width = 64;
-		mask.height = 64;
-		
 		orientation = Sprite.CENTERED;
 		
 		setCollisionGroup(Global.npcCol);
 		
+		//text
 		maxtxt = 1;
-		txt[0] = "may god help you if you trip your feet against my\nhandsome bulk while i am sitting on the floor\nlooking at Depression things on my tablet pc";
+		txt[0] = "..............";
 		
 	}
 	
 	public void step()
 	{
+		//collision with player
 		if(Scene.getCollidedEntities(this, x, y, Global.playerCol).size() == 0)
 		{
 			//vspeed = -1;
@@ -44,17 +41,16 @@ public class DrilNpc extends NpcBase{
 			Player.Current_Npc = this;
 			TextManager.maxtext = maxtxt;
 		}
-		
+
 		if(talk_count == 1)
 		{
-			maxtxt = 2;
-			txt[0] = "h";
-			txt[1] = "q";
+			maxtxt = 1;
+			txt[0] = "um";
 		}
-		if(talk_count >= 2)
+		if(talk_count == 2)
 		{
 			maxtxt = 1;
-			txt[0] = "hi.";
+			txt[0] = "ok";
 		}
 		
 		setDepth((int)-y);
@@ -63,3 +59,4 @@ public class DrilNpc extends NpcBase{
 	}
 
 }
+

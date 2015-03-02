@@ -30,7 +30,7 @@ public class NpcBase extends Entity{
 	public int maxtxt = 100; //the max amount of text is set to some bullshit number bc why not
 	public String[] txt = new String[maxtxt]; //this stores all the text in the npc
 	public int talk_count = 0;
-	public Sprite portrait;
+	public Sprite portrait, idle, walk;
 	
 	public NpcBase(double x, double y) {
 		super(x, y);
