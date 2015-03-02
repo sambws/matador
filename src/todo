@@ -1,0 +1,20 @@
+DONE:
+-movement
+-collision
+-npc base
+-npc actual code
+-text system
+	-> text box
+- cutscene things (barebones, no animation for the characters)
+- make it so that the "talked" variable for npcs is replaced by an integer value so you can have multiple conversations other than the two
+
+TODO:
+- graphix/polish
+- find a better way to load in levels besides massive functions/walls of code (look at the source for 2???)
+- also make an npc editor.
+- make a cutscene editor??????? that'd be neat
+- work on the editor and make that beautiful
+
+CLEANUP:
+-maybe combine the talking/cutscene var for cleaner/easier code
+-PACKAGES PACKAGES PACKAGES
