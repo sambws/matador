@@ -7,6 +7,8 @@ import javax.media.opengl.GL2;
 
 import textStuff.CutsceneThing;
 import textStuff.TextManager;
+import levels.LevelControl;
+import levels.TileList;
 import main.Entity;
 import main.Scene;
 
@@ -29,11 +31,12 @@ public class Root extends Entity{
         
         sprite = Sprite.get("test");
         
-        changeRoom("test room");
+        changeRoom("start");
         
-        //spawn persistent shit
-        new Player(128, 320);
+        //handles text
         new TextManager(0, 0); 
+        //handles levels
+        new LevelControl(0, 0);
 	}
 	
 	public static void changeRoom(String rm){
@@ -42,16 +45,10 @@ public class Root extends Entity{
 		killEveryone();
 		
 		
-		if(rm.equals("test room")){
-			new CutsceneThing(0, 0);
-			new Item(832 / 2, 640 / 2);
-			Levels.level3();
-		}
-		else if (rm.equals("shit")){
-			Levels.shit1(); //the levels handles the spawn of the blocks and npcs
-		}
-		else if (rm.equals("shit2")){
-			Levels.shit2();
+		if(rm.equals("start")){
+			
+			new Player(128, 320);
+			
 		}
 	}
 	

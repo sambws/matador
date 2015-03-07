@@ -32,7 +32,7 @@ public class GameMain extends GameEngineApplet {
 	    Main.loaderImageFileName = ("res/load.png");
 	    Main.loadFont = new Font("Courier New", Font.PLAIN, 12);
 	    Main.icon = "res/icon.png";
-	    Main.title = "OKAYOKAYOKAYOKAYOKAYOKAYOKAY";
+	    Main.title = "Matador";
 	    Scene.killOnEscape = true;
 		RuntimeFixer.DEMANDED_MEMORY = 256;
 		

@@ -2,7 +2,7 @@ package world;
 
 public class Global {
 	public static int playerCol = 0;
-	static int solidCol = 1;
+	public static int solidCol = 1;
 	public static int npcCol = 2;
 	public static int itemCol = 3;
 	
