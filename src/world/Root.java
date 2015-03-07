@@ -5,10 +5,8 @@ import graphics.Sprite;
 
 import javax.media.opengl.GL2;
 
-import textStuff.CutsceneThing;
 import textStuff.TextManager;
 import levels.LevelControl;
-import levels.TileList;
 import main.Entity;
 import main.Scene;
 

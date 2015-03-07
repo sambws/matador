@@ -18,7 +18,7 @@ public class TileList extends Entity{
 	
 	//declare sets here
 	//public static String[] set = {"set_mid", "set_left", "set_right", "set_up", "set_down", "set_nw", "set_ne", "set_sw", "set_se")
-	public static String[] default_set = {"shit"};
+	public static String[] default_set = {"0", "1", "2"};
 	
 	public TileList(double x, double y) {
 		super(x, y);

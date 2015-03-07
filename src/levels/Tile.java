@@ -18,6 +18,7 @@ public class Tile extends Entity{
 		orientation = Sprite.NORTHWEST;
 		mask = sprite.mask;
 		
+		//decides if it should be solid or not
 		if(solid == 1){
 			setCollisionGroup(Global.solidCol);
 		}
