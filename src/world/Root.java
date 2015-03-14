@@ -31,8 +31,6 @@ public class Root extends Entity{
         
         changeRoom("start");
         
-        //handles text
-        new TextManager(0, 0); 
         //handles levels
         new LevelControl(0, 0);
 	}

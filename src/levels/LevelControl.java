@@ -19,13 +19,22 @@ public class LevelControl extends Entity{
 		super(x, y);
 		persistent = true;
 		
-		new TileList(0, 0);
-		
 		LoadLevel();
 	}
 	
 	public void LoadLevel()
 	{
+		/*
+		 * order:
+		 * tileset name
+		 * tilecount
+		 * tile x
+		 * tile y
+		 * tile id (which tile)
+		 * tile depth
+		 * tile solid
+		 * 
+		 */
 		//load level based on coords
 		f = new File("res/levels/" + coord_x + "_" + coord_y + ".map");
 		
