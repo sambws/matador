@@ -2,3 +2,5 @@
 /editor/
 /res/
 /.settings/
+.project
+.classpath
