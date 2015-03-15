@@ -11,3 +11,4 @@ shit.png
 solid.png
 talk.PNG
 test.png
+tiles

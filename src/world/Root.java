@@ -5,7 +5,10 @@ import graphics.Sprite;
 
 import javax.media.opengl.GL2;
 
-import levels.LevelControl;
+import systems.LevelControl;
+import world.cutscenes.CutsceneTest;
+
+
 import main.Entity;
 import main.Scene;
 
@@ -37,13 +40,12 @@ public class Root extends Entity{
 	public static void changeRoom(String rm){
 		room = rm;
 		killEveryone();
-		LevelControl.LoadLevel();
-		
+		LevelControl.LoadLevel(); //load the level depending on the coordinates
 		
 		if(rm.equals("00")){
 			
 			new Player(128, 320); //you shouldn't need this in every level declaration. the player should be persisent, and only deleted in specific events
-			
+			new CutsceneTest(0, 0);
 		}
 	}
 	

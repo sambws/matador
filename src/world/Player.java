@@ -4,8 +4,8 @@ import graphics.Sprite;
 
 import java.awt.event.KeyEvent;
 
-import textStuff.TextManager;
-import npcs.NpcBase;
+import systems.TextManager;
+import world.npcs.NpcBase;
 import main.Entity;
 import main.Input;
 import main.Scene;
@@ -143,7 +143,7 @@ public class Player extends Entity{
 			hasItem  = true;
 		}
 		
-		if(Global.cutscene == true && started_cutscene == false) //start the cutscene if the entity exists
+		if(Global.cutscene == true && started_cutscene == false) //start the cutscene if the proper entity exists
 		{
 			TextManager.InitText(Current_Npc);
 			TextManager.displayText();
