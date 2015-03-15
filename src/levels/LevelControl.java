@@ -5,29 +5,32 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
+import world.Global;
+
 import main.Entity;
 
 public class LevelControl extends Entity{
 
 	//open the file
-	static File f = new File("test.txt");
+	static File f;
 	
-	//unused as for now, used for loading the right file
-	int coord_x = 0, coord_y = 0;
+	//variables for getting the X and Y COORD of the player
+	static int coord_x, coord_y;
 	
 	public LevelControl(double x, double y) {
 		super(x, y);
-		persistent = true;
-		
-		LoadLevel();
 	}
 	
-	public void LoadLevel()
+	public static void LoadLevel()
 	{
+		coord_x = Global.coord_x;
+		coord_y = Global.coord_y;
+		
 		/*
 		 * order:
 		 * tileset name
 		 * tilecount
+		 * 
 		 * tile x
 		 * tile y
 		 * tile id (which tile)
@@ -35,6 +38,7 @@ public class LevelControl extends Entity{
 		 * tile solid
 		 * 
 		 */
+		
 		//load level based on coords
 		f = new File("res/levels/" + coord_x + "_" + coord_y + ".map");
 		
@@ -43,13 +47,13 @@ public class LevelControl extends Entity{
 			FileReader z = new FileReader(f);
 			BufferedReader r = new BufferedReader(z);
 			
-			//the tile family name
+			//the tileset name (a string, eg. "Forest" or "Desert")
 			String tile_id = r.readLine();
 			
-			//amount of tiles in the level
+			//tile count
 			int tile_count = Integer.parseInt(r.readLine());
 			
-			//store the tileset array in a variable
+			//store the tileset graphic array in a variable
 			String s[] = TileList.ChooseSet(tile_id);
 			
 			//loop through the tiles and add them one by one
@@ -62,6 +66,7 @@ public class LevelControl extends Entity{
 				int depth = Integer.parseInt(r.readLine());
 				int solid = Integer.parseInt(r.readLine());
 				
+				//add in the tile with the parameters
 				new Tile((double)_x, (double)_y, s[idd], depth, solid);
 			}
 			
@@ -74,5 +79,4 @@ public class LevelControl extends Entity{
 			e.printStackTrace();
 		}
 	}
-
 }

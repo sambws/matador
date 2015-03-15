@@ -16,9 +16,9 @@ public class TileList extends Entity{
 	 * -southeast
 	 */
 	
-	//declare sets here
+	//declare sets (full of image names) here
 	//public static String[] set = {"set_mid", "set_left", "set_right", "set_up", "set_down", "set_nw", "set_ne", "set_sw", "set_se")
-	public static String[] default_set = {"0", "1", "2"};
+	public static String[] default_set = {"0", "1", "2"}; //load in 0.png, 1.png, and 2.png into the tileset
 	
 	public TileList(double x, double y) {
 		super(x, y);

@@ -5,7 +5,6 @@ import graphics.Sprite;
 
 import javax.media.opengl.GL2;
 
-import textStuff.TextManager;
 import levels.LevelControl;
 import main.Entity;
 import main.Scene;
@@ -29,7 +28,7 @@ public class Root extends Entity{
         
         sprite = Sprite.get("test");
         
-        changeRoom("start");
+        changeRoom(Global.coord_x + "" + Global.coord_y);
         
         //handles levels
         new LevelControl(0, 0);
@@ -37,13 +36,13 @@ public class Root extends Entity{
 	
 	public static void changeRoom(String rm){
 		room = rm;
-		
 		killEveryone();
+		LevelControl.LoadLevel();
 		
 		
-		if(rm.equals("start")){
+		if(rm.equals("00")){
 			
-			new Player(128, 320);
+			new Player(128, 320); //you shouldn't need this in every level declaration. the player should be persisent, and only deleted in specific events
 			
 		}
 	}

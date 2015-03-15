@@ -7,6 +7,7 @@ public class NpcBase extends Entity{
 	
 	/*
 	 * NPCs: they're fucking cool
+	 * this is the class that passes down certain actions and is used when referencing all npcs
 	 * maxtxt is the max amount of text lines (or "pages") that they have
 	 * their txt array holds all of their text "pages"
 	 * talk_count checks how many times you've talked to the npc, which allows you to do cool dark souls type stuff (exhausting dialogue)
@@ -34,7 +35,6 @@ public class NpcBase extends Entity{
 	
 	public NpcBase(double x, double y) {
 		super(x, y);
-		
 	}
 
 	public void perform_action() {
